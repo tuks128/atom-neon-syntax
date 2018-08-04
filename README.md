@@ -4,7 +4,7 @@ Atom - NEON files syntax [@Nette]
 - Package for Atom: https://atom.io/packages/neon
 - Neon file format repo: https://github.com/nette/neon
 
-![Screenshot](screenshot.png)
+![preview](preview.png)
 
 ## Install (GNU\Linux)
 **Edit** -> **Preferences** -> **Install** -> type '**neon**'
