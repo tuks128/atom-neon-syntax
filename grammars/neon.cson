@@ -1,0 +1,47 @@
+# @author_name: Martin Liprt
+# @author_email: tuxxx128@protonmail.com
+
+'scopeName': 'source.neon'
+'name': 'Neon'
+'fileTypes': ['neon', 'neon.template']
+
+'patterns': [
+  {
+    'match': '\\b([0-9a-zA-Z._-]*)(\\s*%?:\\s*?)(?=[\'%]|\\b|$)'
+    'name': 'variable.other.neon'
+    'captures':
+      '1':
+        'name': 'variable.other.neon' # key
+      '2':
+        'name': 'comment.block.neon' # json seperator :
+  },
+  {
+    'match': '\\b\\s*[v+-]?[0-9]*[.]?[0-9]$\\b' #all types of numbers
+    'name': 'constant.numeric.neon'
+  },
+  {
+    'match': '(\\s+[-]\\s*)([a-zA-Z0-9_-]*\.neon)|(\\s+[-]\\s*)([\\\\A-Za-z0-9_]*)'
+    'name': 'punctuation.definition.bold.neon'
+    'captures':
+      '2':
+        'name': 'comment.line.neon' # .neon files
+      '4':
+        'name': 'variable.other.neon' # DI instances
+  },
+  {
+    'match': '\\b(days|day|hours|hour|minutes|minute|weeks|week|TRUE|True|true|FALSE|False|false|YES|Yes|yes|NO|No|no|ON|On|on|OFF|Off|off|NULL|Null|null)\\b'
+    'name': 'constant.language.neon'
+  },
+  {
+    'match': '%[a-zA-Z0-9_.]*%|@[a-zA-Z0-9_.]*' # parameters
+    'name': 'punctuation.definition.bold.neon'
+  },
+  {
+    'match': '#.*\\n' # one line comment
+    'name': 'comment.line.neon'
+  },
+  {
+    'match': '[\\[\\]]' # start/end array (edges)
+    'name': 'constant.language.neon'
+  },
+]
