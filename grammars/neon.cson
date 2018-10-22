@@ -3,7 +3,7 @@
 
 'scopeName': 'source.neon'
 'name': 'Neon'
-'fileTypes': ['neon', 'neon.template']
+'fileTypes': ['neon', 'neon.template', 'neon.dist']
 
 'patterns': [
   {
